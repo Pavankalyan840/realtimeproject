@@ -1,9 +1,9 @@
  Feature: Registration  functionally scenarios
  
  Scenario: verify whether the user able to register into the application by providing all the details 
-  Given I Launch the application
-  And  I navigate account register page 
-  When I fill all the below valid details
+  Given I lanuch the application
+  And Inavigate to account registertion page 
+  When I provide all the below details 
   | FristName | k.pavan              |
   | LastName  | L                    |
   | Email     | panihoney8@Gmail.com |

@@ -4,12 +4,13 @@ import org.junit.Assert;
 
 import com.tutorialsninja.automation.base.Base;
 import com.tutorialsninja.automation.framework.Elements;
+import com.tutorialsninja.automation.framework.Waits;
 import com.tutorialsninja.automation.pages.AccountSuccesspage;
 import com.tutorialsninja.automation.pages.HeadersSection;
 import com.tutorialsninja.automation.pages.Registerpage;
+import com.tutorialsninja.automation.pages.Webseit;
 
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -20,14 +21,15 @@ public class Register {
 	HeadersSection headersSection =new HeadersSection();
 	Registerpage registerpage=new Registerpage();
 	AccountSuccesspage accountsuccesspage =new AccountSuccesspage();
-	
+	Webseit webseit =new  Webseit();
+	Waits wait =new Waits();
 	@Given("^I Launch the application$")
-	public void i_Launch_the_application() {
-	Base.driver.get(Base.reader.getUrl());
-	        
+	public void i_Launch_the_application()  {
+		Base.driver.get(Base.reader.getUrl());
 	}
-
-	@And("^I navigate account register page$")
+	
+	
+@And("^I navigate account register page$")
 	public void i_navigate_account_register_page()  {
 	   Elements.click(HeadersSection.myAccountlink);
 		    Elements.click(HeadersSection.Register);
@@ -35,9 +37,11 @@ public class Register {
 	    
 	}
 
+
+
 	@When("^I fill all the below valid details$")
-	public void i_fill_all_the_below_valid_details(DataTable datatable) {
-	Registerpage.enterAllDetails(datatable);
+	public void i_fill_all_the_below_valid_details(DataTable dataTable) {
+	Registerpage.enterAllDetails(dataTable);
 	    
 	}
 

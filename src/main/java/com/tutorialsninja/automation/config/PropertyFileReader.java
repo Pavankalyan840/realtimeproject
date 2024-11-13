@@ -8,7 +8,7 @@ import com.tutorialsninja.automation.util.PathHelper;
 
 
 
-public class PropertyFileReader implements ConfigurationReader{
+public class PropertyFileReader implements ConfigurationReader {
 	
 	Properties properties=null;
 	
@@ -20,18 +20,16 @@ public class PropertyFileReader implements ConfigurationReader{
 			e.printStackTrace();
 		}
 	}
-
 	public String getUrl() {
 		return properties.getProperty("url");
-	}
-
+		}
 	public String getBrowser() {
 		return properties.getProperty("browser");
-	}
-
+		}
 	public int getPageLoadTimeOut() {
 		return Integer.parseInt(properties.getProperty("PageLoadTimeOut"));
-	}
+		}
+	
 
 	
 	}
