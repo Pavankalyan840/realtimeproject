@@ -9,18 +9,11 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features={"classpath:FeatureFiles/Register.feature"},
 glue={"classpath:com.tutorialsninja.automation.stepdef"},
 plugin={
-		"pretty",
-		"html:target/cucumber/report.html",
-		"json:target/cucumber/report.json",
-		"json:target/cucumber/report.xml",
-		"timeline:target/cucumber",
-		"me.jvt.cucumber.report.prettyReports:tragets/cucumber",
-		"rerun:traget/failedsecnarios.txt"
+		"html:target/cucumber_html_report"
 },
 
-tags={"@Register","@One"})
-public class Runner {
-	
-	
+tags={"@Register"})
 
+public class Runner{
+	
 }
